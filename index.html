@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jhon Clive P. Buenafe | IT Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur border-b border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+        <a href="#quick-summary" class="hover:text-cyan-400 transition-colors">Quick Summary</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="#education" class="hover:text-cyan-400 transition-colors">Education &amp; Training</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-900 border border-slate-800">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Social Quick Links -->
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/Nekko-Innu" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-slate-700 transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jhon-clive-buenafe-009984343" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-slate-700 transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+          </svg>
+        </a>
+        <a href="mailto:jhonclivebuenafe@gmail.com" class="px-3.5 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs sm:text-sm transition-colors">
+          Email Me
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950 px-4 py-3 space-y-2 text-sm text-slate-300">
+      <a href="#about" class="block py-1.5 hover:text-cyan-400">About</a>
+      <a href="#quick-summary" class="block py-1.5 hover:text-cyan-400">Quick Summary</a>
+      <a href="#skills" class="block py-1.5 hover:text-cyan-400">Skills</a>
+      <a href="#projects" class="block py-1.5 hover:text-cyan-400">Projects</a>
+      <a href="#education" class="block py-1.5 hover:text-cyan-400">Education &amp; Training</a>
+      <a href="#contact" class="block py-1.5 hover:text-cyan-400">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-20">
+
+    <!-- Hero / About Section -->
+    <section id="about" class="space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs sm:text-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        Available for IT Internship / OJT (486+ Hours | Dec 2026 / Jan 2027)
+      </div>
+
+      <div class="space-y-3">
+        <h1 class="text-3xl sm:text-5xl font-bold text-slate-100 tracking-tight">
+          Jhon Clive P. Buenafe
+        </h1>
+        <p class="text-lg sm:text-xl font-medium text-cyan-400">
+          BS Information Technology Student &bull; System Administration, IT Support &amp; Networking
+        </p>
+      </div>
+
+      <p class="max-w-3xl text-slate-300 leading-relaxed text-base sm:text-lg">
+        Adaptable Information Technology student at <span class="text-slate-100 font-medium">De La Salle Lipa</span> with hands-on experience in Linux and Windows Server administration, network configuration, hardware/software troubleshooting, and software development, complemented by a specialization in cybersecurity. Ready to support daily IT operations, technical documentation, and infrastructure maintenance across <span class="text-slate-100 font-medium">On-site, Hybrid, or Remote</span> setups.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-3 pt-2">
+        <a href="#quick-summary" class="px-4 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-colors">
+          Copy Applicant Details
+        </a>
+        <a href="#projects" class="px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-medium text-sm transition-colors">
+          View Capstone Project
+        </a>
+        <a href="https://github.com/Nekko-Innu" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-mono text-sm transition-colors">
+          github.com/Nekko-Innu
+        </a>
+      </div>
+    </section>
+
+    <!-- Easy-to-Copy Recruiter Summary Section -->
+    <section id="quick-summary" class="scroll-mt-24">
+      <div class="rounded-xl bg-slate-900 border border-slate-800 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-100">Quick Applicant Summary</h2>
+            <p class="text-sm text-slate-400 mt-1">
+              Click the button to copy my complete details for HR records, endorsements, or application forms.
+            </p>
+          </div>
+          <button
+            id="copy-all-btn"
+            type="button"
+            onclick="copyFullSummary()"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-colors shrink-0"
+          >
+            <svg id="copy-all-icon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copy-all-text">Copy All Details</span>
+          </button>
+        </div>
+
+        <!-- Structured Summary Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div class="p-3.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between gap-2">
+            <div>
+              <span class="block text-xs font-mono uppercase tracking-wider text-slate-500">Full Name</span>
+              <span class="text-slate-100 font-medium">Jhon Clive P. Buenafe</span>
+            </div>
+            <button type="button" onclick="copyText('Jhon Clive P. Buenafe', this)" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 transition-colors">
+              Copy
+            </button>
+          </div>
+
+          <div class="p-3.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between gap-2">
+            <div>
+              <span class="block text-xs font-mono uppercase tracking-wider text-slate-500">Program &amp; University</span>
+              <span class="text-slate-100 font-medium">BS Information Technology &ndash; De La Salle Lipa</span>
+            </div>
+            <button type="button" onclick="copyText('BS Information Technology - De La Salle Lipa', this)" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 transition-colors">
+              Copy
+            </button>
+          </div>
+
+          <div class="p-3.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between gap-2">
+            <div>
+              <span class="block text-xs font-mono uppercase tracking-wider text-slate-500">Email Address</span>
+              <span class="text-slate-100 font-mono">jhonclivebuenafe@gmail.com</span>
+            </div>
+            <button type="button" onclick="copyText('jhonclivebuenafe@gmail.com', this)" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 transition-colors">
+              Copy
+            </button>
+          </div>
+
+          <div class="p-3.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between gap-2">
+            <div>
+              <span class="block text-xs font-mono uppercase tracking-wider text-slate-500">Contact Number</span>
+              <span class="text-slate-100 font-mono">09397480576 (+63 939 748 0576)</span>
+            </div>
+            <button type="button" onclick="copyText('09397480576', this)" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 transition-colors">
+              Copy
+            </button>
+          </div>
+
+          <div class="p-3.5 rounded-lg bg-slate-950 border border-slate-800">
+            <span class="block text-xs font-mono uppercase tracking-wider text-slate-500">OJT Requirements &amp; Start</span>
+            <span class="text-slate-100 font-medium">486 Hours Minimum &bull; Dec 2026 / Jan 2027</span>
+          </div>
+
+          <div class="p-3.5 rounded-lg bg-slate-950 border border-slate-800">
+            <span class="block text-xs font-mono uppercase tracking-wider text-slate-500">Location &amp; Work Setup</span>
+            <span class="text-slate-100 font-medium">Lipa City, Batangas &bull; On-site, Hybrid, or Remote</span>
+          </div>
+        </div>
+
+        <!-- Plain-Text Copy Preview -->
+        <div class="p-4 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-slate-300 leading-relaxed whitespace-pre-line" id="plain-summary-box">Name: Jhon Clive P. Buenafe
+Course &amp; School: BS Information Technology (Cybersecurity Track) - De La Salle Lipa
+Target Roles: IT Support, System Administration, Networking, Software Dev, or InfoSec Intern
+Required Hours: 486 Hours (Minimum) | Target Start: December 2026 or January 2027
+Work Setup: On-site, Hybrid, or Remote (Equipped with personal workstation &amp; reliable internet)
+Location: Lipa City, Batangas (Open to Calamba, Ortigas/Pasig, or Remote)
+Phone: 09397480576 | Email: jhonclivebuenafe@gmail.com
+GitHub: https://github.com/Nekko-Innu | LinkedIn: https://www.linkedin.com/in/jhon-clive-buenafe-009984343</div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="scroll-mt-24 space-y-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-100">Technical Skills</h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-1">
+          Core competencies across IT infrastructure, troubleshooting, development, and security monitoring.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Card 1: SysAdmin -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2.5 text-cyan-400 font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <h3>System Administration &amp; Virtualization</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Windows Server</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Active Directory</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Linux (Ubuntu)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">DNS &amp; DHCP</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Proxmox VE</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Virtual Machine Management</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">OS Installation &amp; Repair</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Networking & Support -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2.5 text-emerald-400 font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <h3>Networking &amp; IT Support</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Subnetting</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">VLAN Configuration</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Routing Protocols</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">SSH</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Cisco Packet Tracer</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Hardware/Software Diagnostics</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Connectivity Troubleshooting</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Programming & Tools -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2.5 text-cyan-400 font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <h3>Programming, Documentation &amp; Tools</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Python</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">C++</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Git &amp; GitHub</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Dashboard UI Development</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Microsoft Office Suite</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Google Workspace</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Technical Documentation</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Cybersecurity & Monitoring -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2.5 text-emerald-400 font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <h3>Cybersecurity &amp; Endpoint Monitoring</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Wazuh SIEM</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Sysmon</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Log Analysis</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">System Hardening</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Security Auditing</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300">Kali Linux</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Academic Project Section -->
+    <section id="projects" class="scroll-mt-24 space-y-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-100">Featured Project</h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-1">
+          Award-winning capstone system combining Linux administration, telemetry pipelines, and dashboard development.
+        </p>
+      </div>
+
+      <div class="rounded-xl bg-slate-900 border border-slate-800 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+          <div class="space-y-1.5">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
+              3rd Place &ndash; Best Capstone Project Award (IT Colloquium '26&ndash;'27)
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-100 pt-1">
+              InsightShield: AI-Augmented Retail Security Audit Tool
+            </h3>
+            <p class="text-sm font-mono text-cyan-400">
+              Role: Lead Programmer &amp; Systems Integrator &bull; De La Salle Lipa
+            </p>
+          </div>
+
+          <a
+            href="https://github.com/Nekko-Innu/InsightShield-SIEM"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-100 font-medium text-sm transition-colors shrink-0"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+            <span>View on GitHub</span>
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+            </svg>
+          </a>
+        </div>
+
+        <ul class="space-y-2.5 text-slate-300 text-sm sm:text-base list-disc list-inside">
+          <li>Led full-cycle software development, task coordination, and Git/GitHub repository workflows to maintain clean version control and continuous integration.</li>
+          <li>Deployed and configured Linux (Ubuntu) environments, managing system services, agent connectivity, and client-server telemetry pipelines.</li>
+          <li>Built user-friendly dashboard interfaces to visualize system logs, operational metrics, and compliance alerts.</li>
+          <li>Integrated endpoint monitoring tools (Sysmon and Wazuh SIEM) to track system performance, resource logs, and security events.</li>
+        </ul>
+
+        <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800">
+          <span class="px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-xs font-mono text-cyan-400">Ubuntu Linux</span>
+          <span class="px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-xs font-mono text-cyan-400">Python</span>
+          <span class="px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-xs font-mono text-cyan-400">Wazuh SIEM</span>
+          <span class="px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-xs font-mono text-cyan-400">Sysmon</span>
+          <span class="px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-xs font-mono text-cyan-400">Git &amp; GitHub</span>
+          <span class="px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-xs font-mono text-cyan-400">Dashboard UI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="scroll-mt-24 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Education & Honors -->
+      <div class="space-y-5">
+        <h2 class="text-2xl font-bold text-slate-100">Education &amp; Honors</h2>
+
+        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+          <span class="text-xs font-mono text-cyan-400">2023 &ndash; Present</span>
+          <h3 class="text-base font-bold text-slate-100">Bachelor of Science in Information Technology</h3>
+          <p class="text-sm text-slate-300">Major in Cybersecurity &bull; De La Salle Lipa</p>
+          <p class="text-xs text-slate-400">Lipa City, Batangas, Philippines</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+          <span class="text-xs font-mono text-emerald-400">October 16, 2026</span>
+          <h3 class="text-base font-bold text-slate-100">3rd Place &ndash; Best Capstone Project Award</h3>
+          <p class="text-sm text-slate-300">Information Security Track &bull; IT Colloquium '26&ndash;'27</p>
+          <p class="text-xs text-slate-400">Junior Philippine Computer Society &ndash; De La Salle Lipa Chapter</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+          <span class="text-xs font-mono text-slate-400">2020 &ndash; 2021</span>
+          <h3 class="text-base font-bold text-slate-100">Senior High School Diploma &ndash; STEM Strand</h3>
+          <p class="text-sm text-slate-300">University of Batangas</p>
+          <p class="text-xs text-slate-400">Batangas, Philippines</p>
+        </div>
+      </div>
+
+      <!-- Trainings & Certifications -->
+      <div class="space-y-5">
+        <h2 class="text-2xl font-bold text-slate-100">Trainings &amp; Certifications</h2>
+
+        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-4 text-sm">
+          <div class="border-b border-slate-800 pb-3">
+            <p class="font-semibold text-slate-100">From Zero to Cloud: Introduction to AWS</p>
+            <p class="text-xs text-slate-400 mt-0.5">Trainocate &bull; April 2026</p>
+          </div>
+
+          <div class="border-b border-slate-800 pb-3">
+            <p class="font-semibold text-slate-100">Launching Your IT Career: CompTIA Tech+ and Certification Roadmap</p>
+            <p class="text-xs text-slate-400 mt-0.5">Trainocate &bull; February 2026</p>
+          </div>
+
+          <div class="border-b border-slate-800 pb-3">
+            <p class="font-semibold text-slate-100">Innovative Research Horizons: AI in Thesis and Beyond</p>
+            <p class="text-xs text-slate-400 mt-0.5">De La Salle Lipa &bull; February 2026</p>
+          </div>
+
+          <div class="border-b border-slate-800 pb-3">
+            <p class="font-semibold text-slate-100">DevRoutes: Navigating Your IT Journey</p>
+            <p class="text-xs text-slate-400 mt-0.5">Allianz &bull; January 2026</p>
+          </div>
+
+          <div class="border-b border-slate-800 pb-3">
+            <p class="font-semibold text-slate-100">Bridging Ethical Hacking and Data Analytics: Building Smarter and Safer Systems</p>
+            <p class="text-xs text-slate-400 mt-0.5">Swinburne University of Technology &bull; January 2026</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-100">Accenture Student Learning Modules</p>
+            <p class="text-xs text-slate-400 mt-0.5">Generative AI Fundamentals, Thinking Critically, Exploring Coding, Discovering Data, Lifelong Learning, Emotional Intelligence, Problem Solving</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Footer Section -->
+    <section id="contact" class="scroll-mt-24">
+      <div class="rounded-xl bg-slate-900 border border-slate-800 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+        <div class="space-y-2">
+          <h2 class="text-2xl font-bold text-slate-100">Get in Touch</h2>
+          <p class="text-sm text-slate-400 max-w-xl">
+            Looking for an IT Intern for System Administration, IT Support, Networking, or Software Development starting December 2026 or January 2027? Feel free to reach out.
+          </p>
+          <div class="pt-2 space-y-1 text-sm font-mono text-slate-300">
+            <p>Email: <a href="mailto:jhonclivebuenafe@gmail.com" class="text-cyan-400 hover:underline">jhonclivebuenafe@gmail.com</a></p>
+            <p>Phone: <span class="text-slate-100">+63 939 748 0576</span></p>
+            <p>Location: <span class="text-slate-100">Lipa City, Batangas, Philippines</span></p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3 shrink-0">
+          <a href="mailto:jhonclivebuenafe@gmail.com?subject=IT%20Internship%20(OJT)%20Opportunity" class="px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm text-center transition-colors">
+            Send Email
+          </a>
+          <a href="https://www.linkedin.com/in/jhon-clive-buenafe-009984343" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-200 font-medium text-sm text-center transition-colors">
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+    <p>&copy; 2026 Jhon Clive P. Buenafe. Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Copy Single Field Helper
+    function copyText(text, btn) {
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('text-emerald-400', 'border-emerald-500/50');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('text-emerald-400', 'border-emerald-500/50');
+        }, 1800);
+      });
+    }
+
+    // Copy Complete Applicant Summary
+    function copyFullSummary() {
+      const summaryText = document.getElementById('plain-summary-box').innerText;
+      const btn = document.getElementById('copy-all-btn');
+      const btnText = document.getElementById('copy-all-text');
+
+      navigator.clipboard.writeText(summaryText).then(() => {
+        btnText.textContent = 'Copied Summary!';
+        btn.classList.remove('bg-cyan-500', 'hover:bg-cyan-400');
+        btn.classList.add('bg-emerald-400');
+        setTimeout(() => {
+          btnText.textContent = 'Copy All Details';
+          btn.classList.remove('bg-emerald-400');
+          btn.classList.add('bg-cyan-500', 'hover:bg-cyan-400');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
