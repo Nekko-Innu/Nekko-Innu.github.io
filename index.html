@@ -42,7 +42,7 @@
         </svg>
       </button>
 
-      <!-- Social Quick Links -->
+      <!-- Social & Copy Email Quick Links -->
       <div class="flex items-center gap-3">
         <a href="https://github.com/Nekko-Innu" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-slate-700 transition-colors">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -54,9 +54,13 @@
             <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
           </svg>
         </a>
-        <a href="mailto:jhonclivebuenafe@gmail.com" class="px-3.5 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs sm:text-sm transition-colors">
-          Email Me
-        </a>
+        <button type="button" onclick="copyEmailAction(this)" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs sm:text-sm transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy Email</span>
+        </button>
       </div>
     </div>
 
@@ -90,17 +94,14 @@
       </div>
 
       <p class="max-w-3xl text-slate-300 leading-relaxed text-base sm:text-lg">
-        Adaptable Information Technology student at <span class="text-slate-100 font-medium">De La Salle Lipa</span> with hands-on experience in Linux and Windows Server administration, network configuration, hardware/software troubleshooting, and software development, complemented by a specialization in cybersecurity. Ready to support daily IT operations, technical documentation, and infrastructure maintenance across <span class="text-slate-100 font-medium">On-site, Hybrid, or Remote</span> setups.
+        Adaptable Information Technology student at <span class="text-slate-100 font-medium">De La Salle Lipa</span> with hands-on experience in Linux and Windows Server administration, network configuration, hardware/software troubleshooting, and software development, complemented by a specialization in cybersecurity. Ready to support daily IT operations, technical documentation, and infrastructure maintenance across <span class="text-slate-100 font-medium">On-site or Hybrid</span> setups.
       </p>
 
       <div class="flex flex-wrap items-center gap-3 pt-2">
-        <a href="#quick-summary" class="px-4 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-colors">
-          Copy Applicant Details
-        </a>
-        <a href="#projects" class="px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-medium text-sm transition-colors">
+        <a href="#projects" class="px-4 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-colors">
           View Capstone Project
         </a>
-        <a href="https://github.com/Nekko-Innu" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-mono text-sm transition-colors">
+        <a href="https://github.com/Nekko-Innu" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-mono text-sm transition-colors">
           github.com/Nekko-Innu
         </a>
       </div>
@@ -122,7 +123,7 @@
             onclick="copyFullSummary()"
             class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-colors shrink-0"
           >
-            <svg id="copy-all-icon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
             </svg>
@@ -179,7 +180,7 @@
 
           <div class="p-3.5 rounded-lg bg-slate-950 border border-slate-800">
             <span class="block text-xs font-mono uppercase tracking-wider text-slate-500">Location &amp; Work Setup</span>
-            <span class="text-slate-100 font-medium">Lipa City, Batangas &bull; On-site, Hybrid, or Remote</span>
+            <span class="text-slate-100 font-medium">Lipa City, Batangas &bull; On-site or Hybrid</span>
           </div>
         </div>
 
@@ -188,8 +189,8 @@
 Course &amp; School: BS Information Technology (Cybersecurity Track) - De La Salle Lipa
 Target Roles: IT Support, System Administration, Networking, Software Dev, or InfoSec Intern
 Required Hours: 486 Hours (Minimum) | Target Start: December 2026 or January 2027
-Work Setup: On-site, Hybrid, or Remote (Equipped with personal workstation &amp; reliable internet)
-Location: Lipa City, Batangas (Open to Calamba, Ortigas/Pasig, or Remote)
+Work Setup: On-site or Hybrid
+Location: Lipa City, Batangas (Open to Calamba, Ortigas/Pasig, or nearby areas)
 Phone: 09397480576 | Email: jhonclivebuenafe@gmail.com
 GitHub: https://github.com/Nekko-Innu | LinkedIn: https://www.linkedin.com/in/jhon-clive-buenafe-009984343</div>
       </div>
@@ -419,16 +420,25 @@ GitHub: https://github.com/Nekko-Innu | LinkedIn: https://www.linkedin.com/in/jh
             Looking for an IT Intern for System Administration, IT Support, Networking, or Software Development starting December 2026 or January 2027? Feel free to reach out.
           </p>
           <div class="pt-2 space-y-1 text-sm font-mono text-slate-300">
-            <p>Email: <a href="mailto:jhonclivebuenafe@gmail.com" class="text-cyan-400 hover:underline">jhonclivebuenafe@gmail.com</a></p>
+            <p>
+              Email:
+              <button type="button" onclick="copyText('jhonclivebuenafe@gmail.com', this)" class="text-cyan-400 hover:underline font-mono">
+                jhonclivebuenafe@gmail.com
+              </button>
+            </p>
             <p>Phone: <span class="text-slate-100">+63 939 748 0576</span></p>
             <p>Location: <span class="text-slate-100">Lipa City, Batangas, Philippines</span></p>
           </div>
         </div>
 
         <div class="flex flex-col gap-3 shrink-0">
-          <a href="mailto:jhonclivebuenafe@gmail.com?subject=IT%20Internship%20(OJT)%20Opportunity" class="px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm text-center transition-colors">
-            Send Email
-          </a>
+          <button type="button" onclick="copyEmailAction(this)" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy Email</span>
+          </button>
           <a href="https://www.linkedin.com/in/jhon-clive-buenafe-009984343" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-200 font-medium text-sm text-center transition-colors">
             Connect on LinkedIn
           </a>
@@ -455,11 +465,27 @@ GitHub: https://github.com/Nekko-Innu | LinkedIn: https://www.linkedin.com/in/jh
       navigator.clipboard.writeText(text).then(() => {
         const original = btn.textContent;
         btn.textContent = 'Copied!';
-        btn.classList.add('text-emerald-400', 'border-emerald-500/50');
+        btn.classList.add('text-emerald-400');
         setTimeout(() => {
           btn.textContent = original;
-          btn.classList.remove('text-emerald-400', 'border-emerald-500/50');
+          btn.classList.remove('text-emerald-400');
         }, 1800);
+      });
+    }
+
+    // Copy Email Button Helper (Top Navbar & Footer CTA)
+    function copyEmailAction(btn) {
+      navigator.clipboard.writeText('jhonclivebuenafe@gmail.com').then(() => {
+        const label = btn.querySelector('span');
+        const original = label.textContent;
+        label.textContent = 'Email Copied!';
+        btn.classList.remove('bg-cyan-500', 'hover:bg-cyan-400');
+        btn.classList.add('bg-emerald-400');
+        setTimeout(() => {
+          label.textContent = original;
+          btn.classList.remove('bg-emerald-400');
+          btn.classList.add('bg-cyan-500', 'hover:bg-cyan-400');
+        }, 2000);
       });
     }
 
